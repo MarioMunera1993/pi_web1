@@ -50,7 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contrasena !== confirmarContrasena) { mostrarMensaje('Las contraseñas no coinciden.', 'error'); return; }
 
     // Preparar carga de datos (payload)
-    const cargaDatos = { nombre, email, telefono, contrasena };
+    const cargaDatos = { 
+      name: nombre,
+      email: email,
+      Phone: telefono,
+      password: contrasena
+    };
 
     // Desactivar botón mientras se realiza la petición
     botonEnviar.disabled = true;
@@ -79,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Éxito
       mostrarMensaje('Cuenta creada con éxito.', 'exito');
       formulario.reset();
-      // Opcional: redirigir después de 2 segundos (comenta si no quieres)
-      // setTimeout(() => { window.location.href = '../index.html'; }, 2000);
+      // envia a login despues del registro
+      setTimeout(() => { window.location.href = '../../public/login.html'; }, 1000);
       console.log('Respuesta del servidor:', datos);
     } catch (err) {
       console.error(err);

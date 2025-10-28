@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="icon" href="../src/assets/image/favicon.ico" type="image/x-icon">
-  
+
   <title>Desafíos</title>
 </head>
+
 <body class="bg-[#C19A6B] text-white flex flex-col min-h-screen">
 
   <!-- Navbar -->
@@ -20,23 +22,37 @@
       <div class="hidden w-full md:flex md:w-auto">
         <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-[#714C3A] md:space-x-8 md:flex-row md:mt-0">
           <li>
-            <a href="../index.html" class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E]">Inicio</a>
+            <a href="../index.html"
+              class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E]">Inicio</a>
           </li>
           <li>
-            <a href="../public/ourProject.html" class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E]">Nuestro Proyecto</a>
+            <a href="../public/ourProject.html"
+              class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E]">Nuestro
+              Proyecto</a>
           </li>
           <li>
-            <a href="../public/aboutus.html" class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E]">Nuestro Equipo</a>
+            <a href="../public/aboutus.html"
+              class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E]">Nuestro
+              Equipo</a>
           </li>
           <li>
-            <a href="../public/multimedia.html" class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E]">Multimedia</a>
+            <a href="../public/multimedia.html"
+              class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E]">Multimedia</a>
           </li>
           <li>
-            <a href="../public/class.html" class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E]">Agendamiento de Clases</a>
+            <a href="../public/class.html"
+              class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E]">Agendamiento
+              de Clases</a>
           </li>
           <li>
-            <a href="../public/contact.html" class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E]">Contáctanos</a>
+            <a href="../public/contact.html"
+              class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E]">Contáctanos</a>
           </li>
+          <!-- <li>
+            <a href="/public/login.html"
+              class="text-white bg-[#714C3A] hover:bg-[#C19A6B] focus:ring-4 focus:outline-none focus:ring-[#C19A6B] font-medium rounded-lg text-sm px-4 py-2 text-center border-gray-200 dark:bg-[#5a3a2e] dark:border-gray-700 dark:hover:bg-[#A57E5A]">
+              Login</a>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -44,7 +60,7 @@
 
   <div class="flex-grow">
     <div class="max-w-6xl mx-auto px-5 py-12">
-      
+
       <div class="bg-[#5A3A2E] rounded-lg shadow-lg p-12 mb-12 border-2 border-[#C19A6B]">
         <section class="text-center">
           <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -58,14 +74,11 @@
 
       <div class="bg-[#5A3A2E] rounded-lg shadow-lg p-6 mb-8">
         <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-center">
-          <input 
-            type="text" 
-            id="buscarDesafio" 
-            placeholder="Buscar por nombre..." 
-            class="px-4 py-2 border border-[#C19A6B] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C19A6B] bg-[#714C3A] text-white placeholder-gray-300"
-          >
-          
-          <select id="filtroCategoria" class="px-4 py-2 border border-[#C19A6B] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C19A6B] bg-[#714C3A] text-white">
+          <input type="text" id="buscarDesafio" placeholder="Buscar por nombre..."
+            class="px-4 py-2 border border-[#C19A6B] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C19A6B] bg-[#714C3A] text-white placeholder-gray-300">
+
+          <select id="filtroCategoria"
+            class="px-4 py-2 border border-[#C19A6B] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C19A6B] bg-[#714C3A] text-white">
             <option value="Todas">Todas las categorías</option>
             <option value="Lógica">Lógica</option>
             <option value="Strings">Strings</option>
@@ -76,7 +89,8 @@
             <option value="Algoritmos">Algoritmos</option>
           </select>
 
-          <select id="filtroDificultad" class="px-4 py-2 border border-[#C19A6B] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C19A6B] bg-[#714C3A] text-white">
+          <select id="filtroDificultad"
+            class="px-4 py-2 border border-[#C19A6B] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C19A6B] bg-[#714C3A] text-white">
             <option value="Todas">Todas las dificultades</option>
             <option value="Fácil">Fácil</option>
             <option value="Intermedio">Intermedio</option>
@@ -118,16 +132,16 @@
     </div>
   </div>
 
-    <!-- Footer -->
+  <!-- Footer -->
 
   <footer class="border-gray-200 bg-[#714C3A] dark:bg-[#5a3a2e] dark:border-gray-700 py-4 w-full mt-auto">
-      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-          <a href="../index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-            <img src="../src/assets/image/vulcano.png" class="h-8" alt="Flowbite Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Vulcano APP</span>
-          </a>
-          <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0 dark:text-white">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="../index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+          <img src="../src/assets/image/vulcano.png" class="h-8" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Vulcano APP</span>
+        </a>
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0 dark:text-white">
           <li>
             <a href="../public/ourProject.html" class="hover:underline me-4 md:me-6">Nuestro Proyecto</a>
           </li>
@@ -144,19 +158,19 @@
             <a href="../public/contact.html" class="hover:underline">Contáctanos</a>
           </li>
         </ul>
-    </div>
-        <hr class="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
-        <span class="block text-sm text-white sm:text-center dark:text-white">© 2025 <a href="https://flowbite.com/"
-            class="hover:underline">Vulcano APP™</a>. All Rights Reserved.</span>
       </div>
-    </footer>
+      <hr class="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
+      <span class="block text-sm text-white sm:text-center dark:text-white">© 2025 <a href="https://flowbite.com/"
+          class="hover:underline">Vulcano APP™</a>. All Rights Reserved.</span>
+    </div>
+  </footer>
   </div>
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-    <script src="../src/scripts/challenges.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="../src/scripts/challenges.js"></script>
+</body>
 
-  </html>
+</html>

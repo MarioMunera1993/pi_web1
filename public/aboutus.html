@@ -1,268 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="icon" href="../src/assets/image/favicon.ico" type="image/x-icon">
   <title>Nosotros</title>
   <link rel="stylesheet" href="../src/styles/aboutus.css">
 </head>
+
 <body class="bg-[#C19A6B] text-white flex flex-col min-h-screen">
 
-<!-- Navbar -->
+  <!-- Navbar -->
 
-<nav class="border-gray-200 bg-[#714C3A] dark:bg-[#5a3a2e] dark:border-gray-700">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="../index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="../src/assets/image/vulcano.png" class="h-8" alt="Flowbite Logo" />
-      <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Vulcano APP</span>
-  </a>
-  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-   <button type="button" class="text-white bg-[#714C3A] hover:bg-[#C19A6B] focus:ring-4 focus:outline-none focus:ring-[#C19A6B] font-medium rounded-lg text-sm px-4 py-2 text-center border-gray-200 dark:bg-[#5a3a2e] dark:border-gray-700 dark:hover:bg-[#A57E5A]">
-    Login</button>
-    <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
-    <span class="sr-only">Open main menu</span>
-    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/></svg>
-    </button>
-  </div>
-  <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
-     <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-[#714C3A] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:bg-[#714C3A] dark:bg-[#5a3a2e]">
-  <li>
-    <a href="../index.html" class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E] dark:text-white dark:hover:bg-[#A57E5A] dark:hover:text-[#C19A6B] md:dark:hover:bg-transparent">Inicio</a>
-  </li>
-  <li>
-    <a href="..//public/ourProject.html" class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E] dark:text-white dark:hover:bg-[#A57E5A] dark:hover:text-[#C19A6B] md:dark:hover:bg-transparent">Nuestro Proyecto</a>
-  </li>
-  <li>
-    <a href="..//public/multimedia.html" class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E] dark:text-white dark:hover:bg-[#A57E5A] dark:hover:text-[#C19A6B] md:dark:hover:bg-transparent">Multimedia</a>
-  </li>
-  <li>
-    <a href="..//public/class.html" class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E] dark:text-white dark:hover:bg-[#A57E5A] dark:hover:text-[#C19A6B] md:dark:hover:bg-transparent">Agrendamiento de Clases</a>
-  </li>
-     <li>
-    <a href="..//public/challenges.html" class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E] dark:text-white dark:hover:bg-[#A57E5A] dark:hover:text-[#C19A6B] md:dark:hover:bg-transparent">Desafios</a>
-  </li>
-  <li>
-    <a href="../public/contact.html" class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E] dark:text-white dark:hover:bg-[#A57E5A] dark:hover:text-[#C19A6B] md:dark:hover:bg-transparent">Contactanos</a>
-  </li>
-    </ul>
-  </div>
-  </div>
-</nav>
+  <nav class="border-gray-200 bg-[#714C3A] dark:bg-[#5a3a2e] dark:border-gray-700">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="../index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="../src/assets/image/vulcano.png" class="h-8" alt="Flowbite Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Vulcano APP</span>
+      </a>
+      <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        <a href="/public/login.html"
+          class="text-white bg-[#714C3A] hover:bg-[#C19A6B] focus:ring-4 focus:outline-none focus:ring-[#C19A6B] font-medium rounded-lg text-sm px-4 py-2 text-center border-gray-200 dark:bg-[#5a3a2e] dark:border-gray-700 dark:hover:bg-[#A57E5A]">
+          Login
+        </a>
+        <button data-collapse-toggle="navbar-cta" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-cta" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+        <ul
+          class="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg bg-[#714C3A] md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:bg-[#714C3A] dark:bg-[#5a3a2e]">
+          <li>
+            <a href="../index.html"
+              class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E] dark:text-white dark:hover:bg-[#A57E5A] dark:hover:text-[#C19A6B] md:dark:hover:bg-transparent">Inicio</a>
+          </li>
+          <li>
+            <a href="..//public/ourProject.html"
+              class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E] dark:text-white dark:hover:bg-[#A57E5A] dark:hover:text-[#C19A6B] md:dark:hover:bg-transparent">Nuestro
+              Proyecto</a>
+          </li>
+          <li>
+            <a href="..//public/multimedia.html"
+              class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E] dark:text-white dark:hover:bg-[#A57E5A] dark:hover:text-[#C19A6B] md:dark:hover:bg-transparent">Multimedia</a>
+          </li>
+          <!-- <li>
+            <a href="..//public/class.html"
+              class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E] dark:text-white dark:hover:bg-[#A57E5A] dark:hover:text-[#C19A6B] md:dark:hover:bg-transparent">Agrendamiento
+              de Clases</a>
+          </li>
+          <li>
+            <a href="..//public/challenges.html"
+              class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E] dark:text-white dark:hover:bg-[#A57E5A] dark:hover:text-[#C19A6B] md:dark:hover:bg-transparent">Desafíos</a>
+          </li> -->
+          <li>
+            <a href="../public/contact.html"
+              class="block py-2 px-3 md:p-0 text-white rounded-sm hover:bg-[#D2B48C] md:hover:bg-transparent md:hover:text-[#5A3A2E] dark:text-white dark:hover:bg-[#A57E5A] dark:hover:text-[#C19A6B] md:dark:hover:bg-transparent">Contáctanos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<!-- --><!-- Descripcion de la sección -->
-<section class="py-16 bg-[#D2B48C]">
-  <div class="max-w-7xl mx-auto px-4">
+  <!-- --><!-- Descripcion de la sección -->
+  <section class="py-16 bg-[#D2B48C]">
+    <div class="max-w-7xl mx-auto px-4">
 
-    <!-- Header -->
-<div class="text-center mb-12 px-6 py-8 bg-[#5a3a2e] rounded-lg shadow-lg">
-  <h2 class="text-4xl font-bold text-white mb-4">Un Equipo con Determinación y Pasión</h2>
-  <p class="text-lg text-white max-w-2xl mx-auto">
-        Nuestro de trabajo trabajo se esfuerza día a día en aprender, colaborar y superar desafíos. Unidos por compromiso y creatividad, avanzamos con determinación para alcanzar nuestras metas y construir un futuro teniendo como base el conocimiento y la innovación.</p>  
-    </div>  
+      <!-- Header -->
+      <div class="text-center mb-12 px-6 py-8 bg-[#5a3a2e] rounded-lg shadow-lg">
+        <h2 class="text-4xl font-bold text-white mb-4">Un Equipo con Determinación y Pasión</h2>
+        <p class="text-lg text-white max-w-2xl mx-auto">
+          Nuestro de trabajo trabajo se esfuerza día a día en aprender, colaborar y superar desafíos. Unidos por
+          compromiso y creatividad, avanzamos con determinación para alcanzar nuestras metas y construir un futuro
+          teniendo como base el conocimiento y la innovación.</p>
+      </div>
 
-</section>
+  </section>
   <section class="bg-[#714C3A] py-12 flex justify-center text-white px-4">
-  <div class="flex flex-wrap justify-center gap-x-6 gap-y-12 max-w-[1600px]">
-    
-    <!-- Card 1 -->
-    <div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
-      <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
-        <div class="absolute backface-hidden border-2 w-full h-full">
-          <img src="../src/assets/image/Foto Julio (1).jpg" class="w-full h-full" />
-        </div>
-  <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-[#D2B48C] overflow-hidden">
-          <div class="text-center flex flex-col items-center justify-center h-full text-white px-2 pb-24">
-            <h1 class="text-3xl font-semibold">Julio Eduardo Correa</h1>
-            <p class="my-2">Scrumm Master</p>
-            <p>Fanático de los videojuegos, hincha del Manchester United y adicto al café. Me gusta aprender cosas nuevas y disfrutar de la vida.</p>
+    <div class="flex flex-wrap justify-center gap-x-6 gap-y-12 max-w-[1600px]">
+
+      <!-- Card 1 -->
+      <div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
+        <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+          <div class="absolute backface-hidden border-2 w-full h-full">
+            <img src="../src/assets/image/Foto Julio (1).jpg" class="w-full h-full" />
+          </div>
+          <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-[#D2B48C] overflow-hidden">
+            <div class="text-center flex flex-col items-center justify-center h-full text-white px-2 pb-24">
+              <h1 class="text-3xl font-semibold">Julio Eduardo Correa</h1>
+              <p class="my-2">Scrumm Master</p>
+              <p>Fanático de los videojuegos, hincha del Manchester United y adicto al café. Me gusta aprender cosas
+                nuevas y disfrutar de la vida.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 2 -->
-    <div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
-      <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
-        <div class="absolute backface-hidden border-2 w-full h-full">
-          <img src="../src/assets/image/Foto Mario M.png" class="w-full h-full" />
-        </div>
-  <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-[#D2B48C] overflow-hidden">
-          <div class="text-center flex flex-col items-center justify-center h-full text-white px-2 pb-24">
-            <h1 class="text-3xl font-semibold">Mario Munera</h1>
-            <p class="my-2">Product Owner</p>
-            <p>Felizmente padre. Fanático de la programación. Mi meta es aprender y crecer en el mundo de la tecnología. Hincha del DIM.</p>
+      <!-- Card 2 -->
+      <div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
+        <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+          <div class="absolute backface-hidden border-2 w-full h-full">
+            <img src="../src/assets/image/Foto Mario M.png" class="w-full h-full" />
+          </div>
+          <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-[#D2B48C] overflow-hidden">
+            <div class="text-center flex flex-col items-center justify-center h-full text-white px-2 pb-24">
+              <h1 class="text-3xl font-semibold">Mario Munera</h1>
+              <p class="my-2">Product Owner</p>
+              <p>Felizmente padre. Fanático de la programación. Mi meta es aprender y crecer en el mundo de la
+                tecnología. Hincha del DIM.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 3 -->
-    <div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
-      <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
-        <div class="absolute backface-hidden border-2 w-full h-full">
-          <img src="../src/assets/image/Foto Roque Aldana (1).jpg" class="w-full h-full" />
-        </div>
-  <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-[#D2B48C] overflow-hidden">
-          <div class="text-center flex flex-col items-center justify-center h-full text-white px-2 pb-24">
-            <h1 class="text-3xl font-semibold">Roque Aldana</h1>
-            <p class="my-2">Team Developer</p>
-            <p>Hincha del Real Madrid, fan de la comida rápida y me gusta jugar microfutbol. Me encanta organizar todo al detalle y dejarlo perfecto. En mis ratos libres, disfruto hacerle arreglos y mejoras a mis motos. Siempre buscando qué mejorar y cómo disfrutar más cada momento.</p>
+      <!-- Card 3 -->
+      <div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
+        <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+          <div class="absolute backface-hidden border-2 w-full h-full">
+            <img src="../src/assets/image/Foto Roque Aldana (1).jpg" class="w-full h-full" />
+          </div>
+          <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-[#D2B48C] overflow-hidden">
+            <div class="text-center flex flex-col items-center justify-center h-full text-white px-2 pb-24">
+              <h1 class="text-3xl font-semibold">Roque Aldana</h1>
+              <p class="my-2">Team Developer</p>
+              <p>Hincha del Real Madrid, fan de la comida rápida y me gusta jugar microfutbol. Me encanta organizar todo
+                al detalle y dejarlo perfecto. En mis ratos libres, disfruto hacerle arreglos y mejoras a mis motos.
+                Siempre buscando qué mejorar y cómo disfrutar más cada momento.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 4 -->
-    <div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
-      <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
-        <div class="absolute backface-hidden border-2 w-full h-full">
-          <img src="../src/assets/image/Foto Albani.jpg" class="w-full h-full" />
-        </div>
-  <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-[#D2B48C] overflow-hidden">
-          <div class="text-center flex flex-col items-center justify-center h-full text-white px-2 pb-24">
-            <h1 class="text-3xl font-semibold">Albani Luciani</h1>
-            <p class="my-2">Team Developer</p>
-            <p>Felizmente mamá, amo cocinar, hago ricas tortas de cumpleaños y me encanta participar en actividades de baile y natación.</p>
+      <!-- Card 4 -->
+      <div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
+        <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+          <div class="absolute backface-hidden border-2 w-full h-full">
+            <img src="../src/assets/image/Foto Albani.jpg" class="w-full h-full" />
+          </div>
+          <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-[#D2B48C] overflow-hidden">
+            <div class="text-center flex flex-col items-center justify-center h-full text-white px-2 pb-24">
+              <h1 class="text-3xl font-semibold">Albani Luciani</h1>
+              <p class="my-2">Team Developer</p>
+              <p>Felizmente mamá, amo cocinar, hago ricas tortas de cumpleaños y me encanta participar en actividades de
+                baile y natación.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Card 5 -->
-    <div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
-      <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
-        <div class="absolute backface-hidden border-2 w-full h-full">
-          <img src="..//src/assets/image/Sergio.jpg" class="w-full h-full" />
-        </div>
-  <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-[#D2B48C] overflow-hidden">
-          <div class="text-center flex flex-col items-center justify-center h-full text-white px-2 pb-24">
-            <h1 class="text-3xl font-semibold">Sergio Andres Montoya</h1>
-            <p class="my-2">Especialista en Producto</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+      <!-- Card 5 -->
+      <div class="w-[300px] h-[420px] bg-transparent cursor-pointer group perspective">
+        <div class="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
+          <div class="absolute backface-hidden border-2 w-full h-full">
+            <img src="..//src/assets/image/Sergio.jpg" class="w-full h-full" />
+          </div>
+          <div class="absolute my-rotate-y-180 backface-hidden w-full h-full bg-[#D2B48C] overflow-hidden">
+            <div class="text-center flex flex-col items-center justify-center h-full text-white px-2 pb-24">
+              <h1 class="text-3xl font-semibold">Sergio Andres Montoya</h1>
+              <p class="my-2">Especialista en Producto</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
+  </section>
 
-  </div>
-    </section>
-
-    <!-- Espacio entre las secciones de cards y el footer-->
-    <section class="bg-[#D2B48C] w-full">
-      <div class="max-w-7xl mx-auto py-8"></div>
-    </section>
+  <!-- Espacio entre las secciones de cards y el footer-->
+  <section class="bg-[#D2B48C] w-full">
+    <div class="max-w-7xl mx-auto py-8"></div>
+  </section>
 
 
-<!-- Formulario de reseñas -->
+  <!-- Formulario de reseñas -->
 
-    <section class="w-full py-12 px-4">
-      <div class="max-w-3xl mx-auto bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-8 text-[#5a3a2e]">
-        <div class="flex items-center justify-between mb-6">
-          <h1 class="text-2xl font-semibold">Queremos Escucharte</h1>
-          <span class="text-sm text-[#A57E5A]">Comparte tu opinión sobre nuestro equipo</span>
-        </div>
+  <section class="w-full py-12 px-4">
+    <div class="max-w-3xl mx-auto bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-8 text-[#5a3a2e]">
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="text-2xl font-semibold">Queremos Escucharte</h1>
+        <span class="text-sm text-[#A57E5A]">Comparte tu opinión sobre nuestro equipo</span>
+      </div>
 
-        <form id="reviewForm" class="grid grid-cols-1 gap-4 mb-6">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" id="author" name="author" placeholder="Tu nombre" required class="w-full px-4 py-2 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white">
-            <select id="rating" name="rating" required class="w-full px-4 py-2 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white">
-              <option value="">Puntuación</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-          <textarea id="comment" name="comment" placeholder="Comentario" required class="w-full px-4 py-3 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white"></textarea>
-          <div class="flex gap-3">
-            <button type="submit" class="flex-1 bg-[#714C3A] text-white py-2 rounded-lg font-semibold hover:bg-[#5a3a2e] transition">Enviar</button>
-            <button type="button" id="clearReviews" class="bg-transparent border border-[#E6D4C1] text-[#5a3a2e] px-4 py-2 rounded-lg hover:bg-[#F7EFE6] transition">Limpiar</button>
-          </div>
-          <div id="formError" class="text-red-600 mt-2 text-sm"></div>
-        </form>
-
-        <div class="flex items-center justify-between mb-4">
-          <label for="sort" class="text-sm font-medium">Ordenar por puntuación:</label>
-          <select id="sort" class="px-3 py-1 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white">
-            <option value="desc">Mayor a menor</option>
-            <option value="asc">Menor a mayor</option>
+      <form id="reviewForm" class="grid grid-cols-1 gap-4 mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" id="author" name="author" placeholder="Tu nombre" required
+            class="w-full px-4 py-2 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white">
+          <select id="rating" name="rating" required
+            class="w-full px-4 py-2 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white">
+            <option value="">Puntuación</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </select>
         </div>
-
-        <div id="reviews" class="space-y-4">
-          
-          <!-- Las reseñas se mostrarán aquí -->
+        <textarea id="comment" name="comment" placeholder="Comentario" required
+          class="w-full px-4 py-3 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white"></textarea>
+        <div class="flex gap-3">
+          <button type="submit"
+            class="flex-1 bg-[#714C3A] text-white py-2 rounded-lg font-semibold hover:bg-[#5a3a2e] transition">Enviar</button>
+          <button type="button" id="clearReviews"
+            class="bg-transparent border border-[#E6D4C1] text-[#5a3a2e] px-4 py-2 rounded-lg hover:bg-[#F7EFE6] transition">Limpiar</button>
         </div>
+        <div id="formError" class="text-red-600 mt-2 text-sm"></div>
+      </form>
+
+      <div class="flex items-center justify-between mb-4">
+        <label for="sort" class="text-sm font-medium">Ordenar por puntuación:</label>
+        <select id="sort"
+          class="px-3 py-1 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white">
+          <option value="desc">Mayor a menor</option>
+          <option value="asc">Menor a mayor</option>
+        </select>
       </div>
 
-      <!-- Modal-->
-      <div id="editModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-lg shadow-2xl p-6 w-full max-w-md text-[#5a3a2e]">
-          <h2 class="text-xl font-semibold mb-4">Editar Reseña</h2>
-          <form id="editForm" class="space-y-4">
-            <input type="text" id="editAuthor" name="author" placeholder="Tu nombre" required class="w-full px-4 py-2 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white">
-            <select id="editRating" name="rating" required class="w-full px-4 py-2 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white">
-              <option value="">Puntuación</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-            <textarea id="editComment" name="comment" placeholder="Comentario" required class="w-full px-4 py-2 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white"></textarea>
-            <div class="flex gap-2">
-              <button type="submit" class="bg-[#714C3A] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#5a3a2e] transition">Guardar</button>
-              <button type="button" id="cancelEdit" class="bg-gray-300 text-[#5a3a2e] px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Cancelar</button>
-            </div>
-          </form>
-          <div id="editError" class="text-red-600 mt-2 text-sm"></div>
-        </div>
+      <div id="reviews" class="space-y-4">
+
+        <!-- Las reseñas se mostrarán aquí -->
       </div>
-    </section>
-
-    <!-- Espacio entre las secciones de cards y el footer-->
-    <section class="bg-[#D2B48C] w-full">
-      <div class="max-w-7xl mx-auto py-8"></div>
-    </section>
-
-
-
-<!-- Footer -->
-
-<footer class="border-gray-200 bg-[#714C3A] dark:bg-[#5a3a2e] dark:border-gray-700 py-4 w-full">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <a href="../index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src="..//src/assets/image/vulcano.png" class="h-8" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Vulcano APP</span>
-            </a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0 dark:text-white">
-                <li>
-                    <a href="..//public/ourProject.html" class="hover:underline me-4 md:me-6">Nuestro Proyecto</a>
-                </li>
-                <li>
-                    <a href="..//public/multimedia.html" class="hover:underline me-4 md:me-6">Multimedia</a>
-                </li>
-            <li>
-              <a href="../public/class.html" class="hover:underline me-4 md:me-6">Agendamiento de Clases</a>
-            </li>
-            <li>
-              <a href="../public/challenges.html" class="hover:underline me-4 md:me-6">Desafíos</a>
-            </li>
-            <li>
-              <a href="../public/contact.html" class="hover:underline">Contáctanos</a>
-            </ul>
-        </div>
-        <hr class="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
-       <span class="block text-sm text-white sm:text-center dark:text-white">© 2025 <a href="https://flowbite.com/" class="hover:underline">Vulcano APP™</a>. All Rights Reserved.</span>
     </div>
-</footer>
+
+    <!-- Modal-->
+    <div id="editModal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+      <div class="bg-white rounded-lg shadow-2xl p-6 w-full max-w-md text-[#5a3a2e]">
+        <h2 class="text-xl font-semibold mb-4">Editar Reseña</h2>
+        <form id="editForm" class="space-y-4">
+          <input type="text" id="editAuthor" name="author" placeholder="Tu nombre" required
+            class="w-full px-4 py-2 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white">
+          <select id="editRating" name="rating" required
+            class="w-full px-4 py-2 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white">
+            <option value="">Puntuación</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <textarea id="editComment" name="comment" placeholder="Comentario" required
+            class="w-full px-4 py-2 border border-[#E6D4C1] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A57E5A] text-[#5a3a2e] bg-white"></textarea>
+          <div class="flex gap-2">
+            <button type="submit"
+              class="bg-[#714C3A] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#5a3a2e] transition">Guardar</button>
+            <button type="button" id="cancelEdit"
+              class="bg-gray-300 text-[#5a3a2e] px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">Cancelar</button>
+          </div>
+        </form>
+        <div id="editError" class="text-red-600 mt-2 text-sm"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Espacio entre las secciones de cards y el footer-->
+  <section class="bg-[#D2B48C] w-full">
+    <div class="max-w-7xl mx-auto py-8"></div>
+  </section>
 
 
-<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-<script src="../src/scripts/ReviewForm.js"></script>
+
+  <!-- Footer -->
+
+  <footer class="border-gray-200 bg-[#714C3A] dark:bg-[#5a3a2e] dark:border-gray-700 py-4 w-full">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+        <a href="../index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+          <img src="..//src/assets/image/vulcano.png" class="h-8" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Vulcano APP</span>
+        </a>
+        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white sm:mb-0 dark:text-white">
+          <li>
+            <a href="..//public/ourProject.html" class="hover:underline me-4 md:me-6">Nuestro Proyecto</a>
+          </li>
+          <li>
+            <a href="..//public/multimedia.html" class="hover:underline me-4 md:me-6">Multimedia</a>
+          </li>
+          <li>
+            <a href="../public/class.html" class="hover:underline me-4 md:me-6">Agendamiento de Clases</a>
+          </li>
+          <li>
+            <a href="../public/challenges.html" class="hover:underline me-4 md:me-6">Desafíos</a>
+          </li>
+          <li>
+            <a href="../public/contact.html" class="hover:underline">Contáctanos</a>
+        </ul>
+      </div>
+      <hr class="my-6 border-white sm:mx-auto dark:border-white lg:my-8" />
+      <span class="block text-sm text-white sm:text-center dark:text-white">© 2025 <a href="https://flowbite.com/"
+          class="hover:underline">Vulcano APP™</a>. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="../src/scripts/ReviewForm.js"></script>
 </body>
+
 </html>

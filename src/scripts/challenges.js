@@ -1,31 +1,14 @@
-const MOCKAPI_DESAFIOS_URL = 'https://68f05b760b966ad50032a281.mockapi.io/desafios';
+const MOCKAPI_DESAFIOS_URL = 'https://68f05b760b966ad50032a281.mockapi.io/Desafios';
 
-// VARIABLES GLOBALES
 let desafios = [];
-let desafioEditando = null;
-let desafioActivo = null;
 
-// ELEMENTOS DEL DOM
-const btnNuevoDesafio = document.getElementById('btnNuevoDesafio');
-const formularioDesafio = document.getElementById('formularioDesafio');
-const tituloFormulario = document.getElementById('tituloFormulario');
-const btnGuardar = document.getElementById('btnGuardar');
-const btnCancelar = document.getElementById('btnCancelar');
 const listaDesafios = document.getElementById('listaDesafios');
 const loading = document.getElementById('loading');
 const estadisticas = document.getElementById('estadisticas');
-
-const inputNombre = document.getElementById('inputNombre');
-const inputCategoria = document.getElementById('inputCategoria');
-const inputDificultad = document.getElementById('inputDificultad');
-const inputPuntos = document.getElementById('inputPuntos');
-const inputDescripcion = document.getElementById('inputDescripcion');
-
 const buscarDesafio = document.getElementById('buscarDesafio');
 const filtroCategoria = document.getElementById('filtroCategoria');
 const filtroDificultad = document.getElementById('filtroDificultad');
 
-// Obtener todos los desafíos
 async function obtenerDesafios() {
   try {
     loading.classList.remove('hidden');
@@ -39,58 +22,6 @@ async function obtenerDesafios() {
     loading.classList.add('hidden');
     console.error('Error:', error);
     alert('Error al cargar los desafíos. Verifica tu conexión a MockAPI.');
-  }
-}
-
-// Crear nuevo desafío
-async function crearDesafio(desafio) {
-  try {
-    const response = await fetch(MOCKAPI_DESAFIOS_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(desafio)
-    });
-    if (!response.ok) throw new Error('Error al crear desafío');
-    await obtenerDesafios();
-    return true;
-  } catch (error) {
-    console.error('Error:', error);
-    alert('Error al crear el desafío: ' + error.message);
-    return false;
-  }
-}
-
-// Actualizar desafío
-async function actualizarDesafio(id, desafio) {
-  try {
-    const response = await fetch(`${MOCKAPI_DESAFIOS_URL}/${id}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(desafio)
-    });
-    if (!response.ok) throw new Error('Error al actualizar desafío');
-    await obtenerDesafios();
-    return true;
-  } catch (error) {
-    console.error('Error:', error);
-    alert('Error al actualizar el desafío: ' + error.message);
-    return false;
-  }
-}
-
-// Eliminar desafío
-async function eliminarDesafio(id) {
-  try {
-    const response = await fetch(`${MOCKAPI_DESAFIOS_URL}/${id}`, {
-      method: 'DELETE'
-    });
-    if (!response.ok) throw new Error('Error al eliminar desafío');
-    await obtenerDesafios();
-    return true;
-  } catch (error) {
-    console.error('Error:', error);
-    alert('Error al eliminar el desafío: ' + error.message);
-    return false;
   }
 }
 
@@ -116,21 +47,9 @@ function renderizarDesafios() {
   }
 
   listaDesafios.innerHTML = desafiosFiltrados.map(desafio => `
-    <div class="bg-[#5A3A2E] rounded-lg shadow-lg p-6 border-l-4 border-[#C19A6B] hover:shadow-xl transition-shadow">
+    <div class="bg-[#5A3A2E] rounded-lg shadow-lg p-6 border-l-4 border-[#C19A6B] hover:shadow-xl transition-shadow desafio-card">
       <div class="flex justify-between items-start mb-3">
         <h3 class="text-xl font-bold text-white flex-1">${desafio.nombre}</h3>
-        <div class="flex gap-2">
-          <button onclick="editarDesafio(${desafio.id})" class="text-[#C19A6B] hover:text-[#D2B48C]">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
-            </svg>
-          </button>
-          <button onclick="confirmarEliminar(${desafio.id}, '${desafio.nombre.replace(/'/g, "\\'")}' )" class="text-red-400 hover:text-red-300">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
-            </svg>
-          </button>
-        </div>
       </div>
 
       <div class="flex flex-wrap gap-2 mb-3">
@@ -147,7 +66,51 @@ function renderizarDesafios() {
     </div>
   `).join('');
 
+  // Aplicar efectos de zoom a las tarjetas
+  aplicarEfectosZoom();
   actualizarEstadisticas();
+}
+
+function aplicarEfectosZoom() {
+  const desafioCards = document.querySelectorAll('.desafio-card');
+
+  desafioCards.forEach((card, index) => {
+    // Aplicar transición suave para todas las transformaciones
+    card.style.transition = 'all 0.6s ease-out';
+
+    // Zoom al hacer hover 
+    card.addEventListener('mouseenter', function() {
+      // Agrandar la tarjeta
+      this.style.transform = 'scale(1.1)';
+      // Agregar sombra para efecto de "elevación"
+      this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.6)';
+      // Aumentar z-index para que se superponga a otras tarjetas
+      this.style.zIndex = '10';
+    });
+
+    // Al quitar el cursor de la tarjeta 
+    card.addEventListener('mouseleave', function() {
+      // Volver al tamaño original
+      this.style.transform = 'scale(1)';
+      // Quitar sombra
+      this.style.boxShadow = '';
+      // Restaurar z-index
+      this.style.zIndex = '1';
+    });
+
+    // Zoom al hacer clic
+    card.addEventListener('click', function(e) {
+      // Solo aplicar zoom si no se hace clic en el botón
+      if (!e.target.closest('button')) {
+        // Hacer un zoom más fuerte momentáneo
+        this.style.transform = 'scale(1.15)';
+        // Después de 200 ms, regresar a un estado de "hover" más suave
+        setTimeout(() => {
+          this.style.transform = 'scale(1.1)';
+        }, 200);
+      }
+    });
+  });
 }
 
 function actualizarEstadisticas() {
@@ -168,89 +131,18 @@ function actualizarEstadisticas() {
   document.getElementById('totalAvanzados').textContent = totalAvanzados;
 }
 
-function mostrarFormulario(editar = false) {
-  formularioDesafio.classList.remove('hidden');
-  tituloFormulario.textContent = editar ? 'Editar Desafío' : 'Nuevo Desafío';
-}
-
-function ocultarFormulario() {
-  formularioDesafio.classList.add('hidden');
-  limpiarFormulario();
-  desafioEditando = null;
-}
-
-function limpiarFormulario() {
-  inputNombre.value = '';
-  inputCategoria.value = 'Lógica';
-  inputDificultad.value = 'Fácil';
-  inputPuntos.value = '10';
-  inputDescripcion.value = '';
-}
-
-function editarDesafio(id) {
-  const desafio = desafios.find(d => d.id == id);
-  if (!desafio) return;
-
-  desafioEditando = desafio;
-  inputNombre.value = desafio.nombre;
-  inputCategoria.value = desafio.categoria;
-  inputDificultad.value = desafio.dificultad;
-  inputPuntos.value = desafio.puntos;
-  inputDescripcion.value = desafio.descripcion;
-  
-  mostrarFormulario(true);
-}
-
-async function guardarDesafio() {
-  if (!inputNombre.value || !inputDescripcion.value) {
-    alert('Por favor completa todos los campos obligatorios');
-    return;
-  }
-
-  const desafio = {
-    nombre: inputNombre.value.trim(),
-    categoria: inputCategoria.value,
-    dificultad: inputDificultad.value,
-    puntos: parseInt(inputPuntos.value),
-    descripcion: inputDescripcion.value.trim()
-  };
-
-  let exito;
-  if (desafioEditando) {
-    exito = await actualizarDesafio(desafioEditando.id, desafio);
-  } else {
-    exito = await crearDesafio(desafio);
-  }
-
-  if (exito) {
-    ocultarFormulario();
-  }
-}
-
-function confirmarEliminar(id, nombre) {
-  if (confirm(`¿Estás seguro de eliminar el desafío "${nombre}"?`)) {
-    eliminarDesafio(id);
-  }
-}
-
-//Ejecutar desafío
-
 function iniciarDesafio(id) {
   const desafio = desafios.find(d => d.id == id);
   if (!desafio) return;
-
-  desafioActivo = desafio;
   mostrarModalDesafio(desafio);
 }
 
 function mostrarModalDesafio(desafio) {
-  // Crear modal
   const modal = document.createElement('div');
   modal.id = 'modalDesafio';
   modal.className = 'fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4';
   modal.innerHTML = `
     <div class="bg-[#5A3A2E] rounded-lg shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col">
-      <!-- Header -->
       <div class="bg-[#714C3A] p-6 border-b-2 border-[#C19A6B]">
         <div class="flex justify-between items-start">
           <div>
@@ -269,7 +161,6 @@ function mostrarModalDesafio(desafio) {
         </div>
       </div>
 
-      <!-- Body -->
       <div class="flex-1 overflow-y-auto p-6">
         <div class="mb-6">
           <h3 class="text-lg font-bold text-white mb-3">📋 Descripción del Desafío</h3>
@@ -281,6 +172,7 @@ function mostrarModalDesafio(desafio) {
           <textarea 
             id="codigoUsuario" 
             class="w-full h-64 px-4 py-3 bg-[#714C3A] text-white rounded-lg font-mono text-sm focus:outline-none focus:ring-2 focus:ring-[#C19A6B] border border-[#C19A6B]"
+            spellcheck="false"
             placeholder="// Escribe tu solución aquí...
 function solucion() {
   // Tu código
@@ -298,7 +190,6 @@ function solucion() {
         </div>
       </div>
 
-      <!-- Footer -->
       <div class="bg-[#714C3A] p-6 border-t-2 border-[#C19A6B] flex gap-3">
         <button 
           onclick="ejecutarCodigo()" 
@@ -325,29 +216,22 @@ function solucion() {
 
 function cerrarModalDesafio() {
   const modal = document.getElementById('modalDesafio');
-  if (modal) {
-    modal.remove();
-  }
-  desafioActivo = null;
+  if (modal) modal.remove();
 }
 
 function ejecutarCodigo() {
   const codigoUsuario = document.getElementById('codigoUsuario').value;
   const resultadoDiv = document.getElementById('resultadoEjecucion');
-  const resultadoContenido = document.getElementById('resultadoContenido');
 
   if (!codigoUsuario.trim()) {
-    mostrarResultado('Por favor, escribe algo de código primero.', 'error');
+    mostrarResultado('💡 Escribe tu código JavaScript arriba y luego presiona "Ejecutar Código" para ver el resultado.', 'info');
     resultadoDiv.classList.remove('hidden');
-    // Desplazar al resultado
-    resultadoDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     return;
   }
 
   resultadoDiv.classList.remove('hidden');
 
   try {
-    // Capturar console.log
     let consoleOutput = [];
     const originalLog = console.log;
     console.log = function(...args) {
@@ -357,17 +241,13 @@ function ejecutarCodigo() {
       originalLog.apply(console, args);
     };
 
-    // Ejecutar código del usuario
     const resultado = eval(codigoUsuario);
-
-    // Restaurar console.log
     console.log = originalLog;
 
-    // Mostrar resultado
     let mensaje = '';
     
     if (consoleOutput.length > 0) {
-      mensaje += '<div class="mb-3"><strong class="text-[#C19A6B]">📝 Console output:</strong><pre class="mt-2 text-gray-300">' + consoleOutput.join('\n') + '</pre></div>';
+      mensaje += '<div class="mb-3"><strong class="text-[#C19A6B]">🔍 Console output:</strong><pre class="mt-2 text-gray-300">' + consoleOutput.join('\n') + '</pre></div>';
     }
     
     if (resultado !== undefined) {
@@ -385,6 +265,12 @@ function ejecutarCodigo() {
   } catch (error) {
     mostrarResultado(`<strong class="text-red-400">❌ Error:</strong><pre class="mt-2 text-white">${error.message}</pre>`, 'error');
   }
+
+  // Scroll automático al resultado
+  setTimeout(() => {
+    const resultadoDiv = document.getElementById('resultadoEjecucion');
+    resultadoDiv.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }, 100);
 }
 
 function mostrarResultado(mensaje, tipo) {
@@ -392,18 +278,14 @@ function mostrarResultado(mensaje, tipo) {
   
   if (tipo === 'success') {
     resultadoContenido.className = 'bg-[#714C3A] rounded-lg p-4 border-l-4 border-green-500';
+  } else if (tipo === 'info') {
+    resultadoContenido.className = 'bg-[#714C3A] rounded-lg p-4 border-l-4 border-blue-400';
   } else {
     resultadoContenido.className = 'bg-[#714C3A] rounded-lg p-4 border-l-4 border-red-500';
   }
   
   resultadoContenido.innerHTML = mensaje;
 }
-
-//Configuración de clicks y acciones de la página
-
-btnNuevoDesafio.addEventListener('click', () => mostrarFormulario());
-btnCancelar.addEventListener('click', ocultarFormulario);
-btnGuardar.addEventListener('click', guardarDesafio);
 
 buscarDesafio.addEventListener('input', renderizarDesafios);
 filtroCategoria.addEventListener('change', renderizarDesafios);
@@ -412,7 +294,6 @@ filtroDificultad.addEventListener('change', renderizarDesafios);
 window.addEventListener('DOMContentLoaded', () => {
   obtenerDesafios();
   
-  // Cerrar modal con ESC
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && document.getElementById('modalDesafio')) {
       cerrarModalDesafio();
@@ -420,9 +301,6 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Hacer funciones globales para onclick del HTML
-window.editarDesafio = editarDesafio;
-window.confirmarEliminar = confirmarEliminar;
 window.iniciarDesafio = iniciarDesafio;
 window.cerrarModalDesafio = cerrarModalDesafio;
 window.ejecutarCodigo = ejecutarCodigo;

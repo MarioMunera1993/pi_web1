@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mostrarMensaje('Cuenta creada con éxito.', 'exito');
       formulario.reset();
       // envia a login despues del registro
-      setTimeout(() => { window.location.href = '../../public/login.html'; }, 1000);
+      setTimeout(() => { window.location.href = '/public/login.html'; }, 1000);
       console.log('Respuesta del servidor:', datos);
     } catch (err) {
       console.error(err);
